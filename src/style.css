@@ -1,0 +1,11 @@
+.body_wrapper {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.arrow_wrapper {
+    display: inline-block;
+    width: 20px;
+}
+.link {
+    margin-right: 5px;
+}

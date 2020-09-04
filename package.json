@@ -1,0 +1,33 @@
+{
+    "name": "@colbycommunications/colby-hidden-block-component",
+    "version": "1.0.0",
+    "description": "Expandable/Collapsible block",
+    "main": "dist/index.js",
+    "author": "Brandon K. Waltz",
+    "license": "MIT",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
+    "scripts": {
+        "build": "colby-package-build",
+        "build:watch": "colby-package-build --watch --verbose",
+        "lint": "colby-package-lint",
+        "format": "colby-package-format",
+        "test": "colby-package-test --watch",
+        "check": "colby-package-lint && colby-package-test",
+        "prepublishOnly": "colby-package-registry && npm run check && colby-package-build"
+    },
+    "devDependencies": {
+        "@colbycommunications/colby-package": "^2.2.3"
+    },
+    "dependencies": {
+        "jquery": "^3.5.1",
+        "prop-types": "^15.5.10",
+        "react": "^16.0.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "colby-package-format -s && colby-package-lint -s && colby-package-test -s"
+        }
+    }
+}
