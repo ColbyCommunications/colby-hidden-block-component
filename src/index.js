@@ -105,7 +105,6 @@ export default class ColbyHiddenBlock extends React.Component {
                     onClick={this.clicked}
                     className={`${style.link}`}
                     ref={element => (this.link = element)}
-                    type="button"
                 >
                     {this.props.title}
                 </a>
